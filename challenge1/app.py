@@ -6,7 +6,7 @@ import numpy as np
 
 app = Flask(__name__)
 
-model = tf.keras.models.load_model('keras2.h5')
+model = tf.keras.models.load_model('keras.h5')
 model.make_predict_function()
 
 
