@@ -39,7 +39,7 @@ def recognize():
         image_prediction = (255 - image_prediction.astype('float')) / 255
 
         prediction = model.predict(np.expand_dims(image_prediction, axis=0))[0]
-        print(prediction)
+
         prediction = classes[np.argmax(prediction, axis=0)]
 
         return jsonify({
